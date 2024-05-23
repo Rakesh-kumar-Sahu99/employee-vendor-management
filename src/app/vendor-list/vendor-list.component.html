@@ -1,0 +1,12 @@
+<div class="vendor-list">
+    <button mat-raised-button color="primary" (click)="goToAdminHomePage()" class="back-button">Back to Admin Homepage</button>
+  
+    <ag-grid-angular 
+      class="ag-theme-quartz" 
+      style="height: 500px;" 
+      [rowData]="rowData" 
+      [columnDefs]="columnDefs"
+      (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
+  </div>
+  

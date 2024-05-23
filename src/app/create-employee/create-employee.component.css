@@ -1,0 +1,18 @@
+.create-employee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  

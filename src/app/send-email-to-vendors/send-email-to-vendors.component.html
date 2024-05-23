@@ -1,0 +1,18 @@
+<div class="send-email-to-vendors">
+    <button mat-raised-button color="primary" (click)="goBack()" class="back-button">Back to Admin Homepage</button>
+  
+    <h2>Send Email to Vendors</h2>
+  
+    <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+      <div formArrayName="vendorNames">
+        <div *ngFor="let vendor of vendors; let i = index">
+          <mat-checkbox [formControlName]="i" (change)="onCheckboxChange(i, $event)">
+            {{ vendor.name }}
+          </mat-checkbox>
+        </div>
+      </div>
+      <button mat-raised-button color="primary" type="submit">Send Emails</button>
+    </form>
+    <button mat-raised-button color="primary" (click)="viewEmailLog()" class="back-button">View Email Log</button>
+  </div>
+  
